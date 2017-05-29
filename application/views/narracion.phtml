@@ -1,0 +1,28 @@
+
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+if($evento):
+?>
+<div><?=$evento->equipo1?>:&nbsp;<span id='marcador1'><?=$evento->marcador1?></span>
+     &nbsp;&nbsp;&nbsp;
+     <?=$evento->equipo2?>:&nbsp;<span id='marcador1'><?=$evento->marcador2?></span>
+</div>
+<div>
+<table>
+    <tr id='trini'><th>Minuto</th><th>Comentario</th></tr>
+<?php
+foreach($narracion as $evento):?>
+    <tr><td><?=$evento->minuto?></td><td><?=$evento->comentario?></td></tr>
+<?php
+endforeach;?>    
+</table>
+</div>
+<?php
+else:
+?>
+<div>Esperando evento disponible ...</div>
+<?php
+endif;
+
+
+   

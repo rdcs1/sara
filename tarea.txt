@@ -1,0 +1,8 @@
+Implementar:
+
+Narrador ->adicionar marcadores editables.
+Narrador ->botón nueva narración: al oprimir este botón se informa a los espectadores que la transmisión finalizó y
+                                     se muestra una vista al narrador para que ingrese nombre equipos, marcadores iniciales.
+                                     A los espectadores se les muestra un mensaje que indica que se está esperando (cargando)
+                                     un nuevo evento.  Una vez el narrador crea el evento se debe actualizar la interfaz de 
+                                     los espectadores con los nuevos datos.

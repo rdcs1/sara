@@ -1,0 +1,28 @@
+
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
+<div><?=$evento->equipo1?>:&nbsp;<span id='marcador1'><?=$evento->marcador1?></span>
+     &nbsp;&nbsp;&nbsp;
+     <?=$evento->equipo2?>:&nbsp;<span id='marcador1'><?=$evento->marcador2?></span>
+</div>
+<div>
+<div>Minuto:&nbsp;<input type='text' id='minuto'></div>
+<div>comentario:<br>
+<textarea id='comentario'></textarea>
+</div>
+<div><input type='button' value='Enviar' id='btncomentar'></div>
+</div>
+<div>
+<table>
+    <tr id='trini'><th>Minuto</th><th>Comentario</th></tr>
+<?php
+foreach($narracion as $evento):?>
+    <tr><td><?=$evento->minuto?></td><td><?=$evento->comentario?></td></tr>
+<?php
+endforeach;?>    
+</table>
+</div>
+
+
+   

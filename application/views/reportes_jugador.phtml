@@ -1,0 +1,47 @@
+
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
+  
+<div class="panel panel-primary">
+  <div class="panel-heading">Reportes</div>
+  <div class="panel-body">
+    <?php
+    echo form_open('jugadores',['class'=>'form-inline']);
+    
+    echo '<div class="form-group">';
+    echo form_label('Jugador&nbsp;','idjugador');
+    echo form_dropdown('jugador',$jugadores,$jugador,['class'=>'form-control','id'=>'idjugador']);
+    echo '</div>&nbsp;';
+    
+    echo '<div class="form-group">';
+    echo form_label('Fini&nbsp;','idfini');
+    echo form_input(['value'=>$fini,'name'=>'fini','placeholder'=>'AAAA-MM-DD','id'=>'idfini','class'=>'form-control']);
+    echo '</div>&nbsp;';
+    
+    echo '<div class="form-group">';
+    echo form_label(' Ffin&nbsp;','idffin');
+    echo form_input(['value'=>$ffin,'name'=>'ffin','placeholder'=>'AAAA-MM-DD','id'=>'idffin','class'=>'form-control']);
+    echo '</div>&nbsp;&nbsp;';
+    
+    echo form_button(['type'=>'submit','class'=>'btn btn-default','content'=>' Generar ']);
+    echo form_close();
+    ?>
+  </div>
+  <?php if(count($partidas)):?>
+  <table class="table table-striped">
+      <tr><th>#</th><th>Fecha</th><th>Hora</th><th>Resultado</th></tr>
+      <?php
+      $i=1;
+      foreach($partidas as $partida):
+          echo "<tr><td>$i</td><td>$partida->fecha</td><td>$partida->hora</td><td>".getMensaje($partida->resultado)."</td></tr>";
+          $i++;
+      endforeach;  
+      ?>  
+  </table>
+<?php endif;?>
+</div>
+
+
+
+   
