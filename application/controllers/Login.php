@@ -17,7 +17,7 @@ class Login extends MY_Controller
 		$password=$this->input->post('password');
 		if($this->ion_auth->login($user, $password)){
 			if($this->ion_auth->is_admin()){
-				redirect('','refresh');
+				redirect('main','refresh');
 			}
 			else{
 			    redirect('espectador','refresh');

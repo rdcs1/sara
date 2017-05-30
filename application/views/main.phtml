@@ -1,0 +1,13 @@
+
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
+<div>
+<table>
+<?php
+foreach($salones as $salon):?>
+    <tr><td id = "salon<?php print($salon);?>"><?php print($salon);?></td></tr>
+<?php
+endforeach;?>    
+</table>
+</div>
